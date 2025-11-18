@@ -1,8 +1,8 @@
-# Bungash Designs - Premium Interior Solutions
+# Bungash Designs Premium Website
 
 ## 🎨 Project Overview
 
-This is a **professional, high-end website** designed for Bungash Designs - a premium interior design company based in Defence, Karachi. Built with modern web technologies including HTML5, CSS3, JavaScript, and GSAP animations to create an impressive, interactive user experience.
+This is a **professional, high-end website** designed for Bungash Designs Solid Surface materials. Built with modern web technologies including HTML5, CSS3, JavaScript, and GSAP animations to create an impressive, interactive user experience.
 
 ## ✨ Features
 
@@ -48,7 +48,7 @@ This is a **professional, high-end website** designed for Bungash Designs - a pr
 ## 📁 File Structure
 
 ```
-corian-website/
+bungash-designs-website/
 │
 ├── index.html          # Main HTML file
 ├── style.css           # All styles and responsive design
@@ -65,15 +65,13 @@ corian-website/
 - High-quality images with overlays
 - Smooth transitions throughout
 
-### Performance Optimizations
-- **Instant Loading** - SVG placeholders instead of external images
-- **No Image Delays** - All images load instantly (< 1KB each)
-- **Fast Loader** - Reduced loading screen time (800ms)
-- **Optimized Animations** - 60fps smooth performance
-- **No Parallax on Images** - Disabled for better performance
-- **Lightweight** - Total page size optimized
+### Performance
+- Optimized animations for 60fps
+- Lazy loading images
+- Efficient GSAP animations
+- Clean, maintainable code
 
-### Design Excellence
+### User Experience
 - Intuitive navigation
 - Smooth scrolling
 - Interactive elements
@@ -119,22 +117,6 @@ Gold: #f39c12
 - Laptop: 992px - 1199px
 - Tablet: 768px - 991px
 - Mobile: 767px and below
-
-## 🚀 Key Performance Features
-
-### Lightning Fast Loading
-- ✅ **SVG Placeholder Images** - No external image dependencies
-- ✅ **Instant Rendering** - All visuals load in < 1 second
-- ✅ **Reduced Loader Time** - Only 800ms initial screen
-- ✅ **Optimized CSS** - Minimal, efficient styling
-- ✅ **Efficient JavaScript** - No unnecessary animations
-- ✅ **No External Dependencies** - Except GSAP CDN
-
-### Company Information
-- **Company Name:** Bungash Designs
-- **Location:** Defence, Karachi, Pakistan
-- **Email:** info@bungashdesigns.com
-- **Phone:** +92 300 1234567
 
 ## 🌟 Best Practices
 

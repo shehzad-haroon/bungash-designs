@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initLoader() {
     const loader = document.querySelector('.loader');
     
-    // Faster loading - reduced time
+    // Simulate loading
     setTimeout(() => {
         loader.classList.add('hidden');
         
@@ -37,7 +37,7 @@ function initLoader() {
         setTimeout(() => {
             animateHeroContent();
         }, 100);
-    }, 800); // Reduced from 2000ms to 800ms
+    }, 2000);
 }
 
 // ============================================
@@ -646,11 +646,22 @@ if (newsletterForm) {
 }
 
 // ============================================
-// Parallax Effects (Disabled for Performance)
+// Parallax Effects
 // ============================================
 
-// Parallax disabled for faster performance
-// Images load instantly with SVG placeholders
+// Add subtle parallax to images
+gsap.utils.toArray('.product-image img, .gallery-item img').forEach((img) => {
+    gsap.to(img, {
+        yPercent: 20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: img,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+});
 
 // ============================================
 // Button Interactions
@@ -694,24 +705,18 @@ allButtons.forEach(button => {
 });
 
 // ============================================
-// Image Lazy Loading Effect (Optimized)
+// Image Lazy Loading Effect
 // ============================================
 
 const images = document.querySelectorAll('img');
 
 images.forEach(img => {
-    // Don't fade SVG data URIs (they load instantly)
-    if (img.src.startsWith('data:image/svg')) {
-        img.style.opacity = '1';
-        return;
-    }
-    
     img.style.opacity = '0';
     
     img.addEventListener('load', function() {
         gsap.to(img, {
             opacity: 1,
-            duration: 0.5, // Faster fade-in
+            duration: 0.8,
             ease: 'power2.out'
         });
     });
@@ -720,7 +725,7 @@ images.forEach(img => {
     if (img.complete) {
         gsap.to(img, {
             opacity: 1,
-            duration: 0.5,
+            duration: 0.8,
             ease: 'power2.out'
         });
     }
@@ -795,5 +800,5 @@ window.addEventListener('resize', () => {
 // Console Message
 // ============================================
 
-console.log('%c🎨 Bungash Designs - Premium Interiors ', 'background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 20px; font-size: 16px; font-weight: bold;');
-console.log('%cBuilt with GSAP, Modern JavaScript, and Love ❤️ | Defence, Karachi', 'color: #667eea; font-size: 12px;');
+console.log('%c🎨 Premium Bungash Designs Website ', 'background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 20px; font-size: 16px; font-weight: bold;');
+console.log('%cBuilt with GSAP, Modern JavaScript, and Love ❤️', 'color: #667eea; font-size: 12px;');

@@ -37,19 +37,6 @@
     --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
-/* Optimized image loading */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Disable parallax on images for better performance */
-.product-image img,
-.gallery-item img {
-    transform: none !important;
-}
-
 * {
     margin: 0;
     padding: 0;
